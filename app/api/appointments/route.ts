@@ -15,8 +15,8 @@ export async function POST(req:Request) {
     const date=String(body.date||'');
     const time=String(body.time||'');
     const notes=String(body.notes||'').trim();
-    const selected=Array.isArray(body.services)
-      ? [...new Set(body.services.filter((s:unknown):s is string=>typeof s==='string'&&services.some(x=>x.id===s)))] : [];
+    const selected:string[]=Array.isArray(body.services)
+      ? [...new Set<string>((body.services as unknown[]).filter((s:unknown):s is string=>typeof s==='string'&&services.some(x=>x.id===s)))] : [];
     const details:Record<string,string>={};
     if(body.details&&typeof body.details==='object'&&!Array.isArray(body.details)){
       for(const s of services){
