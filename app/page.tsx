@@ -1,17 +1,61 @@
 import Link from 'next/link';
-import {ArrowDown,ArrowUpRight} from 'lucide-react';
-import {ArrowLink} from '@/components/SiteChrome';
-import {GalleryGrid,MirrorDemo,ServiceExplorer} from '@/components/Interactive';
-export default function Home(){return <>
-<section className="hero" id="home"><div className="hero-giant" aria-hidden="true">OJUEWA</div><div className="hero-portrait" role="img" aria-label="Editorial beauty portrait"/><div className="hero-content"><span className="eyebrow">✳ &nbsp; THE BEAUTY ATELIER</span><h1>Your Beauty.<br/><em>Our Artistry.</em></h1><p>From flawless makeup to beautiful hairstyles and perfectly finished nails, discover a beauty experience designed around you.</p><div className="hero-actions"><Link href="/book" className="button button-light">BOOK YOUR EXPERIENCE <ArrowUpRight size={17}/></Link><Link href="/services" className="hero-link">EXPLORE SERVICES ↗</Link></div></div><div className="hero-bottom"><span>BEAUTY, IN ALL ITS FORMS.</span><a href="#beauty-menu" aria-label="Scroll to beauty menu"><ArrowDown size={19}/></a><span>01 / AN INTRODUCTION</span></div></section>
-<div className="ticker" aria-hidden="true"><div>ARTISTRY &nbsp; ✳ &nbsp; BEAUTY &nbsp; ✳ &nbsp; INTENTION &nbsp; ✳ &nbsp; CONFIDENCE &nbsp; ✳ &nbsp; ARTISTRY &nbsp; ✳ &nbsp; BEAUTY &nbsp; ✳</div></div>
-<section className="section intro"><div className="overline"><span>01 / OUR PHILOSOPHY</span><span>THE ART OF BECOMING</span></div><div className="intro-content"><span className="intro-symbol">✳</span><div><h2>Beauty is not about<br/>becoming someone else.<br/><em>It's about becoming you.</em></h2><div className="intro-footer"><p>We believe your beauty deserves intention. Every brushstroke, every strand, every finishing touch is an opportunity to express who you are.</p><ArrowLink href="/about">DISCOVER OUR STORY</ArrowLink></div></div></div></section>
-<section className="section services" id="beauty-menu"><div className="overline"><span>02 / THE BEAUTY MENU</span><span>EXPLORE OUR DISCIPLINES</span></div><div className="section-title"><h2>Every detail.<br/><em>Beautifully considered.</em></h2><p>Four expressions of beauty. One space to make them yours.</p></div><ServiceExplorer/></section>
-<section className="section dark mirror-section"><div className="overline"><span>03 / THE MIRROR EXPERIENCE</span><span>AN INTERACTIVE STUDY</span></div><div className="mirror-layout"><div><span className="eyebrow">REFLECTIONS OF BEAUTY</span><h2>See the<br/><em>artistry</em><br/>unfold.</h2><p>Beauty can shift with the light. Explore this editorial color study by dragging the mirror handle.</p><span className="giant-flower">✳</span></div><MirrorDemo/></div></section>
-<section className="section craft"><div className="overline"><span>04 / THE ART OF BEAUTY</span><span>OUR CRAFT, UP CLOSE</span></div><div className="section-title"><h2>Behind every look,<br/><em>there is intention.</em></h2><p>Beauty is a practice of care, precision and personal expression.</p></div><div className="craft-layout"><div className="craft-image photo" style={{backgroundImage:"url('https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=1300&q=85')"}}><span>EDITORIAL PHOTOGRAPHY</span></div><div className="craft-list">{[['01','The Perfect Canvas','Makeup preparation, color, blending, and the finishing brushstroke.'],['02','The Art of Hair','Texture, shape, and styles designed to express individuality.'],['03','The Finishing Touch','Little details with an unmistakable impact.'],['04','A Moment for You','Time dedicated to care, comfort, and a beautiful finish.']].map(([n,title,desc])=><div className="craft-item" key={n}><small>{n}</small><div><h3>{title}</h3><p>{desc}</p></div><ArrowUpRight size={19}/></div>)}</div></div></section>
-<section className="section gallery-home"><div className="overline"><span>05 / THE BEAUTY GALLERY</span><span>AN EDITORIAL PREVIEW</span></div><div className="section-title"><h2>Beauty, from<br/><em>every angle.</em></h2><div><p>A preview of the visual world of OJUEWA. Actual client work will be added with permission.</p><ArrowLink href="/gallery">VIEW THE GALLERY</ArrowLink></div></div><GalleryGrid limit={4}/></section>
-<section className="booking-banner"><div className="banner-photo photo" style={{backgroundImage:"url('https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1300&q=85')"}}/><div className="banner-copy"><span className="eyebrow">06 / YOUR BEAUTY, YOUR WAY</span><span className="banner-spark">✳</span><h2>An experience<br/><em>entirely yours.</em></h2><p>Choose the services you love, tell us your vision, and request a time that works for you.</p><Link href="/book" className="button button-light">CREATE YOUR SESSION <ArrowUpRight size={17}/></Link></div></section>
-<section className="section bridal"><div className="overline"><span>07 / THE BRIDAL EDIT</span><span>MADE FOR YOUR MOMENT</span></div><div className="bridal-layout"><div><span className="eyebrow">THE BRIDAL EXPERIENCE</span><h2>For the moments<br/>you'll remember<br/><em>forever.</em></h2><p>Beautifully considered makeup for one of life's most meaningful celebrations. Tell us the look you're dreaming of.</p><ArrowLink href="/book?service=makeup">ENQUIRE ABOUT BRIDAL BEAUTY</ArrowLink></div><div className="bridal-photo photo" style={{backgroundImage:"url('https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1300&q=85')"}}><span>EDITORIAL PHOTOGRAPHY</span></div></div></section>
-<section className="section dark studio"><div className="overline"><span>08 / BEHIND THE ARTISTRY</span><span>THE PEOPLE & THE PLACE</span></div><div className="studio-layout"><div><span className="eyebrow">A PERSONAL TOUCH</span><h2>The hands behind<br/><em>the beauty.</em></h2><p>Every great beauty experience begins with a person who listens. We look forward to introducing the artist or team behind OJUEWA.</p><ArrowLink href="/about">GET TO KNOW OJUEWA</ArrowLink></div><div className="studio-photo photo" style={{backgroundImage:"url('https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=1200&q=85')"}}><span>TEAM PROFILE TO BE PROVIDED</span></div></div></section>
-<section className="closing"><span className="eyebrow">THE NEXT CHAPTER IS YOURS</span><h2>READY TO <em>GLOW?</em></h2><p>Your next beauty experience is just an appointment request away.</p><div className="closing-actions"><Link href="/book" className="button button-dark">BOOK YOUR APPOINTMENT <ArrowUpRight size={17}/></Link><Link href="/contact" className="button button-outline">GET IN TOUCH <ArrowUpRight size={17}/></Link></div></section>
-</>}
+import {ArrowDownRight,ArrowUpRight,MoveUpRight} from 'lucide-react';
+import {BeautyHero,LookSelector,MotionIn,ScrollMeter,BeautyCursor} from '@/components/AtelierExperience';
+import {gallery,services} from '@/lib/data';
+import './atelier.css';
+
+export default function Home(){
+return <div className="atelier-site">
+<ScrollMeter/><BeautyCursor/>
+<section className="at-hero" id="top">
+ <div className="at-hero-grain" aria-hidden="true"/>
+ <div className="at-hero-top"><span>INDEPENDENT BEAUTY ATELIER</span><span className="at-top-index">NIGERIA &nbsp; / &nbsp; EST. IN ARTISTRY</span></div>
+ <BeautyHero/>
+ <div className="at-hero-footer"><span>NOT A NEW FACE. A NEW FEELING.</span><a href="#discover" aria-label="Explore the atelier">SCROLL TO DISCOVER <ArrowDownRight size={19}/></a><span>01 — 06</span></div>
+</section>
+
+<section className="at-manifesto" id="discover">
+ <MotionIn className="at-manifesto-mark"><span>THE OJUEWA POINT OF VIEW</span><span className="at-asterisk" aria-hidden="true">✳</span></MotionIn>
+ <MotionIn><h2>We don’t do<br/><em>ordinary</em> beauty<span className="at-period">.</span></h2></MotionIn>
+ <div className="at-manifesto-bottom"><span>01 / THE MANIFESTO</span><MotionIn><p>Your face, your mood, your occasion. Makeup, hair, nails and care, made personal. Beauty isn’t a template. It’s a language—and you get to write it.</p></MotionIn></div>
+</section>
+
+<section className="at-look-lab" id="experiences">
+ <div className="at-section-index"><span>02 / THE BEAUTY LAB</span><span>TOUCH. SWITCH. EXPLORE.</span></div>
+ <div className="at-lab-heading"><MotionIn><h2>Pick your<br/><em>kind of magic.</em></h2></MotionIn><p>Not a menu you scroll past. A collection to play with. Find the beauty experience that feels like you.</p></div>
+ <LookSelector/>
+</section>
+
+<section className="at-inbetween">
+ <div className="at-inbetween-image at-photo" style={{backgroundImage:"url('https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=1200&q=85')"}} role="img" aria-label="Beauty artistry reference photograph"/>
+ <div className="at-inbetween-type" aria-hidden="true">ART<br/><i>IS</i><br/>YOU.</div>
+ <div className="at-inbetween-label"><span>THE DETAILS MAKE THE DIFFERENCE</span><span>03 / A CLOSER LOOK</span></div>
+</section>
+
+<section className="at-craft">
+ <div className="at-section-index"><span>04 / THE PROCESS</span><span>THE ART OF THE DETAILS</span></div>
+ <div className="at-craft-header"><MotionIn><h2>It’s in the<br/><em>little things.</em></h2></MotionIn><p>Great beauty is a collection of deliberate little decisions. Here are the disciplines we celebrate.</p></div>
+ <div className="at-craft-rows">
+ {services.map((s,i)=><Link href={'/services/'+s.id} className="at-craft-row" key={s.id}><span className="at-craft-count">0{i+1}</span><div className="at-craft-name"><h3>{s.name}</h3><span>{s.label}</span></div><span className="at-craft-hover-photo" style={{backgroundImage:'url('+s.image+')'}} aria-hidden="true"/><ArrowUpRight size={30}/></Link>)}
+ </div>
+</section>
+
+<section className="at-portfolio">
+ <div className="at-section-index"><span>05 / THE VISUAL DIARY</span><span>AN EDITORIAL MOODBOARD</span></div>
+ <div className="at-portfolio-head"><MotionIn><h2>Looks to<br/><em>live for.</em></h2></MotionIn><Link href="/gallery" className="at-circle-link" aria-label="Explore full beauty gallery"><ArrowUpRight size={30}/></Link></div>
+ <div className="at-portfolio-gallery">
+ {gallery.slice(0,3).map((look,i)=><Link href={'/book?service='+look.category} key={look.id} className={'at-portfolio-item at-item-'+i}><div className="at-portfolio-image at-photo" style={{backgroundImage:'url('+look.image+')'}}/><div className="at-portfolio-caption"><span>0{i+1} / {look.category.toUpperCase()}</span><strong>{look.title}</strong><MoveUpRight size={20}/></div></Link>)}
+ </div>
+ <p className="at-reference-disclaimer">Editorial reference photography for inspiration. Authentic OJUEWA client work will be added with permission.</p>
+</section>
+
+<section className="at-appointment">
+ <div className="at-appointment-decor" aria-hidden="true">✳</div>
+ <div className="at-section-index"><span>06 / YOUR MOMENT</span><span>MAKE IT PERSONAL</span></div>
+ <MotionIn><h2>Let’s make<br/>something <em>beautiful.</em></h2></MotionIn>
+ <p>One beauty session, entirely yours. Tell us what you’re dreaming of; we’ll take it from there.</p>
+ <Link className="at-book-pill" href="/book">CREATE YOUR BEAUTY SESSION <ArrowUpRight size={22}/></Link>
+ <div className="at-appointment-bottom"><span>OJUEWA — THE ART OF BECOMING</span><a href="#top">BACK TO TOP ↑</a></div>
+</section>
+</div>
+}
