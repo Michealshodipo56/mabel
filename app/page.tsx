@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import {ArrowDownRight,ArrowUpRight,MoveUpRight} from 'lucide-react';
 import {BeautyHero,LookSelector,MotionIn,ScrollMeter,BeautyCursor} from '@/components/AtelierExperience';
+import {BeautyAccent} from '@/components/BeautyAccent';
 import {gallery,services} from '@/lib/data';
 import './atelier.css';
 
@@ -15,7 +16,7 @@ return <div className="atelier-site">
 </section>
 
 <section className="at-manifesto" id="discover">
- <MotionIn className="at-manifesto-mark"><span>THE OJUEWA POINT OF VIEW</span><span className="at-asterisk" aria-hidden="true">✳</span></MotionIn>
+ <MotionIn className="at-manifesto-mark"><span>THE OJUEWA POINT OF VIEW</span><BeautyAccent kind="brush" className="at-beauty-mark" /></MotionIn>
  <MotionIn><h2>We don’t do<br/><em>ordinary</em> beauty<span className="at-period">.</span></h2></MotionIn>
  <div className="at-manifesto-bottom"><span>01 / THE MANIFESTO</span><MotionIn><p>Your face, your mood, your occasion. Makeup, hair, nails and care, made personal. Beauty isn’t a template. It’s a language—and you get to write it.</p></MotionIn></div>
 </section>
@@ -50,7 +51,7 @@ return <div className="atelier-site">
 </section>
 
 <section className="at-appointment">
- <div className="at-appointment-decor" aria-hidden="true">✳</div>
+ <div className="at-appointment-decor" aria-hidden="true"><BeautyAccent kind="mirror" className="at-appointment-emblem" /></div>
  <div className="at-section-index"><span>06 / YOUR MOMENT</span><span>MAKE IT PERSONAL</span></div>
  <MotionIn><h2>Let’s make<br/>something <em>beautiful.</em></h2></MotionIn>
  <p>One beauty session, entirely yours. Tell us what you’re dreaming of; we’ll take it from there.</p>

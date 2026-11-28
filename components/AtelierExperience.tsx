@@ -3,6 +3,7 @@ import Link from 'next/link';
 import {ArrowUpRight,ChevronLeft,ChevronRight,MoveDownRight} from 'lucide-react';
 import {useEffect,useRef,useState} from 'react';
 import {services} from '@/lib/data';
+import {BeautyAccent} from '@/components/BeautyAccent';
 
 const heroLooks=[
 {label:'01 / THE CANVAS',word:'BEAUTY',image:'https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&fit=crop&w=1900&q=90',description:'Beauty, on your own terms.'},
@@ -42,7 +43,7 @@ export function LookSelector(){
    <div className="at-selector-stage" id="beauty-panel" role="tabpanel" aria-labelledby={'beauty-tab-'+s.id}>
     <div className="at-selector-image" key={s.id} style={{backgroundImage:'url('+s.image+')','--slide-direction':direction} as React.CSSProperties}/>
     <span className="at-stage-vertical">THE OJUEWA COLLECTION</span>
-    <div className="at-stage-sticker" aria-hidden="true">Made<br/>for you ✳</div>
+    <div className="at-stage-sticker" aria-hidden="true">Made<br/>for you <BeautyAccent kind="polish" className="at-sticker-emblem" /></div>
     <div className="at-stage-foot"><span>{s.label}</span><span>0{active+1} / 04</span></div>
    </div>
    <div className="at-selector-story"><span className="at-small-label">THE EXPERIENCE / 0{active+1}</span><h3 key={s.intro}>{s.intro}</h3><p>{s.description}</p><Link href={'/book?service='+s.id} className="at-select-book">MAKE IT YOURS <MoveDownRight size={22}/></Link></div>
